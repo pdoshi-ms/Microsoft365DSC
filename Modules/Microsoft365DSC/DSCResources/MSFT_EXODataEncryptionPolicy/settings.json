@@ -1,0 +1,32 @@
+﻿{
+    "resourceName": "EXODataEncryptionPolicy",
+    "description": "",
+    "roles": {
+        "read": [
+            "Global Reader"
+        ],
+        "update": [
+            "Exchange Administrator"
+        ]
+    },
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [],
+                "update": []
+            },
+            "application": {
+                "read": [],
+                "update": []
+            }
+        },
+        "exchange": {
+            "requiredroles": [
+                "Recipient Policies",
+                "Mail Recipient Creation",
+                "View-Only Configuration"
+            ],
+            "requiredrolegroups": "Organization Management"
+        }
+    }
+}

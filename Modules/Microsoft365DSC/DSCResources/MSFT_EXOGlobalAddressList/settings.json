@@ -1,0 +1,30 @@
+﻿{
+    "resourceName": "EXOGlobalAddressList",
+    "description": "",
+    "roles": {
+        "read": [
+            "Global Reader"
+        ],
+        "update": [
+            "Exchange Administrator"
+        ]
+    },
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [],
+                "update": []
+            },
+            "application": {
+                "read": [],
+                "update": []
+            }
+        },
+        "exchange": {
+            "requiredroles": [
+                "Address Lists"
+            ],
+            "requiredrolegroups": []
+        }
+    }
+}

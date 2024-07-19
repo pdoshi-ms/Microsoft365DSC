@@ -1,0 +1,44 @@
+﻿{
+    "resourceName": "O365Group",
+    "description": "",
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [
+                    {
+                        "name": "Group.Read.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "Group.Read.All"
+                    },
+                    {
+                        "name": "Group.ReadWrite.All"
+                    },
+                    {
+                        "name": "User.Read.All"
+                    }
+                ]
+            },
+            "application": {
+                "read": [
+                    {
+                        "name": "Group.Read.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "Group.Read.All"
+                    },
+                    {
+                        "name": "Group.ReadWrite.All"
+                    },
+                    {
+                        "name": "User.Read.All"
+                    }
+                ]
+            }
+        }
+    }
+}

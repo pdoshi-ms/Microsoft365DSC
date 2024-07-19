@@ -1,0 +1,70 @@
+﻿{
+    "resourceName": "SPOTenantSettings",
+    "description": "",
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [
+                    {
+                        "name": "Domain.Read.All"
+                    },
+                    {
+                        "name": "SharePointTenantSettings.Read.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "Domain.Read.All"
+                    },
+                    {
+                        "name": "SharePointTenantSettings.ReadWrite.All"
+                    }
+                ]
+            },
+            "application": {
+                "read": [
+                    {
+                        "name": "Domain.Read.All"
+                    },
+                    {
+                        "name": "SharePointTenantSettings.Read.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "Domain.Read.All"
+                    },
+                    {
+                        "name": "SharePointTenantSettings.ReadWrite.All"
+                    }
+                ]
+            }
+        },
+        "sharepoint": {
+            "delegated": {
+                "read": [
+                    {
+                        "name": "Sites.FullControl.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "Sites.FullControl.All"
+                    }
+                ]
+            },
+            "application": {
+                "read": [
+                    {
+                        "name": "Sites.FullControl.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "Sites.FullControl.All"
+                    }
+                ]
+            }
+        }
+    }
+}

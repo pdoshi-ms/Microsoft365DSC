@@ -1,0 +1,22 @@
+﻿{
+    "resourceName": "O365AdminAuditLogConfig",
+    "description": "",
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [],
+                "update": []
+            },
+            "application": {
+                "read": [],
+                "update": []
+            }
+        },
+        "exchange": {
+            "requiredroles": [
+                "Audit Logs"
+            ],
+            "requiredrolegroups": []
+        }
+    }
+}

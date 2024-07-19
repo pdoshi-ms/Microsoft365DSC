@@ -1,0 +1,32 @@
+﻿{
+    "resourceName": "EXOAuthenticationPolicy",
+    "description": "",
+    "roles": {
+        "read": [
+            "Global Reader"
+        ],
+        "update": [
+            "Exchange Administrator"
+        ]
+    },
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [],
+                "update": []
+            },
+            "application": {
+                "read": [],
+                "update": []
+            }
+        },
+        "exchange": {
+            "requiredroles": [
+                "View-Only Configuration",
+                "Organization Configuration",
+                "Recipient Policies"
+            ],
+            "requiredrolegroups": "Organization Management"
+        }
+    }
+}

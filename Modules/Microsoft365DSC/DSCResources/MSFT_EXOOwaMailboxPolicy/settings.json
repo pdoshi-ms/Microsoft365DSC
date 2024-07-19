@@ -1,0 +1,32 @@
+﻿{
+    "resourceName": "EXOOwaMailboxPolicy",
+    "description": "",
+    "roles": {
+        "read": [
+            "Global Reader"
+        ],
+        "update": [
+            "Exchange Administrator"
+        ]
+    },
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [],
+                "update": []
+            },
+            "application": {
+                "read": [],
+                "update": []
+            }
+        },
+        "exchange": {
+            "requiredroles": [
+                "Recipient Policies",
+                "View-Only Configuration",
+                "Mail Recipients"
+            ],
+            "requiredrolegroups": "Organization Management"
+        }
+    }
+}

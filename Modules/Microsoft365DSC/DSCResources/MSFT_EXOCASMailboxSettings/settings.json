@@ -1,0 +1,32 @@
+﻿{
+    "resourceName": "EXOCASMailboxSettings",
+    "description": "",
+    "roles": {
+        "read": [
+            "Global Reader"
+        ],
+        "update": [
+            "Exchange Administrator"
+        ]
+    },
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [],
+                "update": []
+            },
+            "application": {
+                "read": [],
+                "update": []
+            }
+        },
+        "exchange": {
+            "requiredroles": [
+                "User Options",
+                "View-Only Recipients",
+                "Mail Recipients"
+            ],
+            "requiredrolegroups": "Organization Management"
+        }
+    }
+}

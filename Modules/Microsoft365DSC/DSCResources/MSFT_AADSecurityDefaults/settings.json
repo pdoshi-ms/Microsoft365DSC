@@ -1,0 +1,38 @@
+﻿{
+    "resourceName": "AADSecurityDefaults",
+    "description": "This resource configures an Azure Active Directory Security Defaults.",
+    "roles": {
+        "read": [],
+        "update": [
+            "Security Administrator"
+        ]
+    },
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [
+                    {
+                        "name": "Policy.Read.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "Policy.ReadWrite.ConditionalAccess"
+                    }
+                ]
+            },
+            "application": {
+                "read": [
+                    {
+                        "name": "Policy.Read.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "Policy.ReadWrite.ConditionalAccess"
+                    }
+                ]
+            }
+        }
+    }
+}

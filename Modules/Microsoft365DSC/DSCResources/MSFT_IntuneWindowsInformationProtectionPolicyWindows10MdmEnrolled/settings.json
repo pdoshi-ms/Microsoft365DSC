@@ -1,0 +1,32 @@
+{
+    "resourceName": "IntuneWindowsInformationProtectionPolicyWindows10MdmEnrolled",
+    "description": "This resource configures an Intune Windows Information Protection Policy for Windows10 Mdm Enrolled.",
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [
+                    {
+                        "name": "DeviceManagementApps.Read.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "DeviceManagementApps.ReadWrite.All"
+                    }
+                ]
+            },
+            "application": {
+                "read": [
+                    {
+                        "name": "DeviceManagementApps.Read.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "DeviceManagementApps.ReadWrite.All"
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "resourceName": "IntuneAppConfigurationPolicy",
+    "description": "This resource configures the Intune App configuration policies.",
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [
+                    {
+                        "name": "Group.Read.All"
+                    },
+                    {
+                        "name": "DeviceManagementApps.Read.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "DeviceManagementApps.ReadWrite.All"
+                    }
+                ]
+            },
+            "application": {
+                "read": [
+                    {
+                        "name": "Group.Read.All"
+                    },
+                    {
+                        "name": "DeviceManagementApps.Read.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "DeviceManagementApps.ReadWrite.All"
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+
+# <ResourceFriendlyName>
+
+## Description
+
+<ResourceDescription>

@@ -1,0 +1,50 @@
+﻿{
+    "resourceName": "PlannerPlan",
+    "description": "",
+    "permissions": {
+        "graph": {
+            "delegated": {
+                "read": [
+                    {
+                        "name": "Group.Read.All"
+                    },
+                    {
+                        "name": "Tasks.Read"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "Group.Read.All"
+                    },
+                    {
+                        "name": "Tasks.Read"
+                    },
+                    {
+                        "name": "Tasks.ReadWrite"
+                    }
+                ]
+            },
+            "application": {
+                "read": [
+                    {
+                        "name": "Group.Read.All"
+                    },
+                    {
+                        "name": "Tasks.Read.All"
+                    }
+                ],
+                "update": [
+                    {
+                        "name": "Group.Read.All"
+                    },
+                    {
+                        "name": "Tasks.Read.All"
+                    },
+                    {
+                        "name": "Tasks.ReadWrite.All"
+                    }
+                ]
+            }
+        }
+    }
+}

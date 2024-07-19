@@ -1,0 +1,60 @@
+name: Generate Resources & Deploy GitHub Pages
+on:
+  push:
+    branches:
+      - Master
+      - Dev
+jobs:
+  GenerateResource:
+    runs-on: windows-latest
+
+    permissions: write-all
+
+      # Only when run from the main repo
+    if: github.repository == 'microsoft/Microsoft365DSC'
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Modules
+        shell: powershell
+        run: |
+          Import-Module -Name "./Modules/Microsoft365DSC"
+          Update-M365DSCResourceDocumentationPage -SourcePath ./Modules/Microsoft365DSC
+          New-M365DSCCmdletDocumentation
+      - name: Commit files # commit the output folder
+        if: always()
+        shell: pwsh
+        run: |
+          git config --local user.email "nicharl@microsoft.com"
+          git config --local user.name "NikCharlebois"
+          git add D:/a/Microsoft365DSC/Microsoft365DSC/docs/docs/*
+          git pull
+          git commit -m "Updated Resources and Cmdlet documentation pages"
+          git push
+          $SHA = git rev-parse HEAD
+          echo "commitid=$SHA" >> $env:GITHUB_OUTPUT
+
+  deploy:
+    needs: GenerateResource
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pages: write
+
+    # Only when run from the main repo
+    if: github.repository == 'microsoft/Microsoft365DSC'
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ needs.GenerateResource.outputs.commitid }}
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: |
+          pip install mkdocs-material
+          pip install mkdocs-include-dir-to-nav
+      - name: Deploy
+        working-directory: ./docs
+        run: mkdocs gh-deploy --force
